@@ -9,7 +9,7 @@ pnpm [Link](https://pnpm.js.org/)
 ```bash
 
 # install dependencies
-$ pnpm i ----shamefully-hoist
+$ pnpm i --shamefully-hoist
 
 # add dependencies
 $ pnpm add xxxx
