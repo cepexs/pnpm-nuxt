@@ -1,10 +1,12 @@
 # pnpm-nuxt
 
+## install pnpm
+
+pnpm [Link](https://pnpm.js.org/)
+
 ## Build Setup
 
 ```bash
-# install pnpm
-$ pnpm [Link](https://pnpm.js.org/)
 
 # install dependencies
 $ pnpm i ----shamefully-hoist
