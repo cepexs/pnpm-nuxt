@@ -1,6 +1,6 @@
 # pnpm-nuxt
 
-## install pnpm
+## Install pnpm
 
 pnpm [Link](https://pnpm.js.org/)
 
