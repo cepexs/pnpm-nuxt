@@ -1,3 +1,4 @@
+/* eslint-disable eol-last */
 export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
@@ -19,7 +20,8 @@ export default {
   plugins: [
     { src: '@/plugins/carousel-3d.js', ssr: false },
     { src: '@/plugins/vue-quill.js', ssr: false },
-    { src: '@/plugins/vue-aos', ssr: false }
+    { src: '@/plugins/vue-aos', ssr: false },
+    { src: '@/plugins/flickity.js', ssr: false }
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
