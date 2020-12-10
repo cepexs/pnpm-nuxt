@@ -1,75 +1,71 @@
 <template>
   <div class="container">
-    <!-- <perfect-scrollbar> -->
-    <div class="test">
-      <Logo />
-      <h1 class="title">
-        pnpm-nuxt
-      </h1>
+    <div>
+      <div class="test">
+        <Logo />
+        <h1 class="title">
+          pnpm-nuxt
+        </h1>
+      </div>
+      <div class="test" data-aos="fade-left" data-aos-duration="2000">
+        <h1>Carousel 3D</h1>
+        <client-only>
+          <carousel-3d
+            :per-page="5"
+            :space="365"
+            :width="360"
+            :loop="true"
+            :disable3d="false"
+          >
+            <slide v-for="(n, i) in slide" :key="i" :index="i">
+              {{ n }}
+            </slide>
+          </carousel-3d>
+        </client-only>
+      </div>
+      <div class="test" data-aos="zoom-in-down" data-aos-duration="2000">
+        <h1>Flickity</h1>
+        <client-only>
+          <Flickity ref="flickity" :options="flickityOptions">
+            <div class="carousel-cell">
+              1
+            </div>
+            <div class="carousel-cell">
+              2
+            </div>
+            <div class="carousel-cell">
+              3
+            </div>
+            <div class="carousel-cell">
+              4
+            </div>
+            <div class="carousel-cell">
+              5
+            </div>
+          </Flickity>
+        </client-only>
+      </div>
+      <div
+        class="test"
+        data-aos="flip-left"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="2000"
+      >
+        <h1>Vue Quill Editor</h1>
+        <client-only>
+          <quill-editor
+            ref="editor"
+            v-model="content"
+            :options="editorOption"
+          />
+        </client-only>
+      </div>
     </div>
-    <div class="test" data-aos="fade-left" data-aos-duration="2000">
-      <h1>Carousel 3D</h1>
-      <client-only>
-        <carousel-3d
-          :per-page="5"
-          :space="365"
-          :width="360"
-          :loop="true"
-          :disable3d="false"
-        >
-          <slide v-for="(n, i) in slide" :key="i" :index="i">
-            {{ n }}
-          </slide>
-        </carousel-3d>
-      </client-only>
-    </div>
-    <div class="test">
-      <h1>Flickity</h1>
-      <client-only>
-        <Flickity ref="flickity" :options="flickityOptions">
-          <div class="carousel-cell">
-            1
-          </div>
-          <div class="carousel-cell">
-            2
-          </div>
-          <div class="carousel-cell">
-            3
-          </div>
-          <div class="carousel-cell">
-            4
-          </div>
-          <div class="carousel-cell">
-            5
-          </div>
-        </Flickity>
-      </client-only>
-    </div>
-    <div
-      class="test"
-      data-aos="flip-left"
-      data-aos-easing="ease-out-cubic"
-      data-aos-duration="2000"
-    >
-      <h1>Vue Quill Editor</h1>
-      <client-only>
-        <quill-editor
-          ref="editor"
-          v-model="content"
-          :options="editorOption"
-        />
-      </client-only>
-    </div>
-    <!-- </perfect-scrollbar> -->
   </div>
 </template>
 
 <script>
-// import flickity from 'vue-flickity'
 export default {
-  components: {
-    // flickity
-  },
   data () {
     return {
       slide: 5,
@@ -98,9 +94,6 @@ export default {
 </script>
 
 <style>
-/* .ps {
-  height: 800px;
-} */
 .container {
   margin: 0 auto;
   min-height: 100vh;
