@@ -22,6 +22,7 @@ export default {
     { src: '@/plugins/vue-quill.js', ssr: false },
     { src: '@/plugins/vue-aos', ssr: false },
     { src: '@/plugins/flickity.js', ssr: false }
+    // { src: '@/plugins/perfect-scrollbar.js' }
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
